@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 #drum-machine {
@@ -24,7 +25,7 @@ body {
 }
 
 #drum-pads-container {
-    width: 67%;
+    width: 50%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -40,4 +41,22 @@ body {
     align-items: center;
     margin: 5px;
     padding: 3px;
+}
+
+#active-drum {
+    text-align: center;
+    width: 50%;
+}
+
+h1, h2 {
+    font-weight: 300;
+}
+
+@media screen and (max-width: 950px) {
+    #inner-display {
+        width: 95vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
