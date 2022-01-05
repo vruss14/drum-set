@@ -5,13 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    
+
     <title>Drum Set</title>
 </head>
 <body>
 
-<p>Testing 123</p>
+    <div id="drum-machine">
+        <div id="inner-display">
+            <div id="drum-pads-container">
+                <div class="row">
+                    <div class="drum-pad" id="q">Q</div>
+                    <div class="drum-pad" id="w">W</div>
+                    <div class="drum-pad" id="e">E</div>
+                </div>
+
+                <div class="row">
+                    <div class="drum-pad" id="a">A</div>
+                    <div class="drum-pad" id="s">S</div>
+                    <div class="drum-pad" id="d">D</div>
+                </div>
+
+                <div class="row">
+                    <div class="drum-pad" id="z">Z</div>
+                    <div class="drum-pad" id="x">X</div>
+                    <div class="drum-pad" id="c">C</div>
+                </div>
+            </div>
+
+            <div id="active-drum">
+                <h1>Drum Played:</h1>
+                <h2 id="display">None</h2>
+            </div>
+        </div>
+    </div> 
+
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="script.js"></script>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
