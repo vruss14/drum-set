@@ -1,12 +1,30 @@
+body::before {
+    background: white;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+    ), url('pexels-stephen-niemeier-63703.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.5vw;
 }
 
 #drum-machine {
-    background-color: rgb(191, 248, 229);
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -18,10 +36,15 @@ body {
 #inner-display {
     width: 50vw;
     height: 40vh;
-    border: 3px solid black;
+    background-color: rgb(218, 218, 218);
+    border: 7px solid rgb(78, 78, 78);
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    opacity: 70%;
+    border-radius: 10px;
+    outline: 3px solid white;
+    padding: 2rem;
 }
 
 #drum-pads-container {
@@ -32,15 +55,23 @@ body {
 }
 
 .drum-pad {
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     border: 3px solid black;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px;
+    margin: 7px;
     padding: 3px;
+    background-color: black;
+    color: white;
+}
+
+.drum-pad:hover {
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+    cursor: pointer;
 }
 
 #active-drum {
@@ -49,14 +80,64 @@ body {
 }
 
 h1, h2 {
-    font-weight: 300;
+    font-family: 'Amatic SC', cursive;
 }
 
-@media screen and (max-width: 950px) {
+h1 {
+    font-size: 5vw;
+}
+
+h2 {
+    font-size: 4vw;
+}
+
+@media screen and (max-width: 1350px) {
     #inner-display {
-        width: 95vw;
+        width: 80vw;
+        height: auto;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    #drum-pads-container {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    body {
+        font-size: 3vw;
+    }
+
+    h1 {
+        font-size: 7vw;
+    }
+
+    h2 {
+        font-size: 6vw;
+    }  
+
+    #inner-display {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    body {
+        font-size: 5vw;
+    }
+
+    h1 {
+        font-size: 9vw;
+    }
+
+    h2 {
+        font-size: 8vw;
+    }
+
+    .drum-pad {
+        width: 40px;
+        height: 40px;
     }
 }
